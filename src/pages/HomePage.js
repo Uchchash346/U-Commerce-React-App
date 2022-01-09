@@ -2,6 +2,8 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import fireDB from '../fireConfig';
+import { fireProducts } from '../ucommerce-products'
+
 function HomePage() {
 
     async function addData() {
@@ -13,8 +15,8 @@ function HomePage() {
     }
     async function getData() {
         try {
-            const users = await getDocs(collection(fireDB, "users"), { name: 'Ullash', age: 27 })
-            const usersArray = [];
+            const users = await getDocs(collection(fireDB, "products"))
+            const productsArray = [];
             users.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
                 const obj = {
@@ -22,13 +24,14 @@ function HomePage() {
                     ...doc.data()
                 }
 
-                usersArray.push(obj)
+                productsArray.push(obj)
             });
-            console.log(usersArray)
+            console.log(productsArray)
         } catch (error) {
             console.log(error)
         }
     }
+
 
     return (
         <Layout>
