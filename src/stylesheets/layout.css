@@ -32,3 +32,15 @@
     left: 0;
     right: 0;
 }
+
+button{
+    background-color: #003F5C;
+    box-shadow: none;
+    border: 1px solid rgba(255,255,255,0.692);
+    color: white;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: tomato;
+}

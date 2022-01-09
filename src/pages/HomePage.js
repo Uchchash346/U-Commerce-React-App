@@ -38,10 +38,19 @@ function HomePage() {
                 <div className="row">
                     {products.map((product) => {
                         return <div className="col-md-4">
-                            <div className="m-2 p-1 product">
-                                <p>{product.title}</p>
-                                <div className="text-center">
-                                <img src={product.image} alt="" className="product-img" />
+                            <div className="m-2 p-1 product position-relative">
+                                <div className="product-content">
+                                    <p>{product.title}</p>
+                                    <div className="text-center">
+                                        <img src={product.image} alt="" className="product-img" />
+                                    </div>
+                                </div>
+                                <div className="product-actions">
+                                    <h2>{product.price} Tk</h2>
+                                    <div className="d-flex">
+                                        <button className="mx-2">ADD TO CART</button>
+                                        <button>VIEW</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
