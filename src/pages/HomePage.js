@@ -3,9 +3,11 @@ import Layout from '../components/Layout'
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import fireDB from '../fireConfig';
 import { fireProducts } from '../ucommerce-products'
+import { useNavigate } from 'react-router-dom'
 
 function HomePage() {
     const [products, setProducts] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         getData()
@@ -49,7 +51,9 @@ function HomePage() {
                                     <h2>{product.price} Tk</h2>
                                     <div className="d-flex">
                                         <button className="mx-2">ADD TO CART</button>
-                                        <button>VIEW</button>
+                                        <button onClick={() => {
+                                            navigate(`/Productinfo/${product.id}`)
+                                        }}>VIEW</button>
                                     </div>
                                 </div>
                             </div>
@@ -62,3 +66,4 @@ function HomePage() {
 }
 
 export default HomePage
+// 1:48:25
