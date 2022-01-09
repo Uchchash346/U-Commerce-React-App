@@ -6,6 +6,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ProductInfo from './pages/ProductInfo';
 import CartPage from './pages/CartPage';
+import './stylesheets/products.css'
 
 function App() {
   return (

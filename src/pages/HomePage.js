@@ -1,18 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Layout from '../components/Layout'
 import { collection, addDoc, getDocs } from "firebase/firestore";
 import fireDB from '../fireConfig';
 import { fireProducts } from '../ucommerce-products'
 
 function HomePage() {
+    const [products, setProducts] = useState([]);
 
-    async function addData() {
-        try {
-            await addDoc(collection(fireDB, "users"), { name: 'tuba', age: 18 })
-        } catch (error) {
-            console.log(error)
-        }
-    }
+    useEffect(() => {
+        getData()
+    }, [])
+
     async function getData() {
         try {
             const users = await getDocs(collection(fireDB, "products"))
@@ -26,7 +24,8 @@ function HomePage() {
 
                 productsArray.push(obj)
             });
-            console.log(productsArray)
+
+            setProducts(productsArray)
         } catch (error) {
             console.log(error)
         }
@@ -35,9 +34,20 @@ function HomePage() {
 
     return (
         <Layout>
-            <h1>Home</h1>
-            <button onClick={addData}>Add Data to Firebase</button>
-            <button onClick={getData}>get Data from Firebase</button>
+            <div className="container">
+                <div className="row">
+                    {products.map((product) => {
+                        return <div className="col-md-4">
+                            <div className="m-2 p-1 product">
+                                <p>{product.title}</p>
+                                <div className="text-center">
+                                <img src={product.image} alt="" className="product-img" />
+                                </div>
+                            </div>
+                        </div>
+                    })}
+                </div>
+            </div>
         </Layout>
     )
 }
