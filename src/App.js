@@ -7,6 +7,7 @@ import RegisterPage from './pages/RegisterPage';
 import ProductInfo from './pages/ProductInfo';
 import CartPage from './pages/CartPage';
 import './stylesheets/products.css'
+import './stylesheets/authentication.css'
 
 function App() {
   return (
