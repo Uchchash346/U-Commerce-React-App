@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../stylesheets/layout.css'
-import {FaBars} from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
 function Header() {
+    const { cartItems } = useSelector(state => state.cartReducer)
     return (
         <div className="header">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,7 +25,7 @@ function Header() {
                                 <Link className="nav-link" to="/">Logout</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">Cart</Link>
+                                <Link className="nav-link" to="/">Cart {cartItems.length}</Link>
                             </li>
                         </ul>
                     </div>
