@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function HomePage() {
     const [products, setProducts] = useState([]);
-    const { cartItems } = useSelector(state => state.cartReducer)
+    const { cartItems } = useSelector((state) => state.cartReducer)
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -65,7 +65,7 @@ function HomePage() {
                                     <div className="d-flex">
                                         <button className="mx-2" onClick={() => addToCart(product)}>ADD TO CART</button>
                                         <button onClick={() => {
-                                            navigate(`/Productinfo/${product.id}`)
+                                            navigate(`/productinfo/${product.id}`)
                                         }}>VIEW</button>
                                     </div>
                                 </div>
@@ -78,5 +78,4 @@ function HomePage() {
     )
 }
 
-export default HomePage
-// 1:48:25
+export default HomePage;

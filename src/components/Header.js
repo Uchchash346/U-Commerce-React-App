@@ -28,13 +28,13 @@ function Header() {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/">Orders</Link>
+                                <Link className="nav-link" to="/orders">Orders</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/" onClick={logout}>Logout</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/"><FaCartPlus /> {cartItems.length}</Link>
+                                <Link className="nav-link" to="/cart"><FaCartPlus /> {cartItems.length}</Link>
                             </li>
                         </ul>
                     </div>

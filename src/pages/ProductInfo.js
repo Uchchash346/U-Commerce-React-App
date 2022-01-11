@@ -8,8 +8,9 @@ function ProductInfo() {
     const [product, setProduct] = useState();
     const [loading, setLoading] = useState(false);
     const params = useParams();
+    
     useEffect(() => {
-        getData()
+        getData();
     }, [])
 
     async function getData() {
