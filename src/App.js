@@ -8,10 +8,13 @@ import ProductInfo from './pages/ProductInfo';
 import CartPage from './pages/CartPage';
 import './stylesheets/products.css'
 import './stylesheets/authentication.css'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer />
       <BrowserRouter>
         <Routes>
           <Route path='/' exact element={<HomePage />} />
