@@ -10,6 +10,7 @@ import './stylesheets/products.css'
 import './stylesheets/authentication.css'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import OrdersPage from './pages/OrdersPage';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path='/' exact element={<ProtectedRoutes><HomePage /></ProtectedRoutes>} />
           <Route path='/productinfo/:productid' exact element={<ProtectedRoutes><ProductInfo /></ProtectedRoutes>} />
           <Route path='/cart' exact element={<ProtectedRoutes><CartPage /></ProtectedRoutes>} />
-          
+          <Route path='/orders' exact element={<ProtectedRoutes><OrdersPage /></ProtectedRoutes>} />
+
           <Route path='/login' exact element={<LoginPage />} />
           <Route path='/register' exact element={<RegisterPage />} />
         </Routes>
