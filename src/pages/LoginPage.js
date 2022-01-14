@@ -34,7 +34,7 @@ function LoginPage() {
                         <h2>Login</h2>
                         <hr />
                         <input type="text" className="form-control" placeholder="email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
-                        <input type="text" className="form-control" placeholder="password" value={password} onChange={(e) => { setPassword(e.target.value) }} />
+                        <input type="password" className="form-control" placeholder="password" value={password} onChange={(e) => { setPassword(e.target.value) }} />
                         <button className="my-3" onClick={login}>LOGIN</button>
                         <hr />
                         <Link to="/register">Click Here To Register</Link>
