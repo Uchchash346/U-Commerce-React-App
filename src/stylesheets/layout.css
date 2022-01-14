@@ -61,3 +61,7 @@ button:hover{
 a{
     text-decoration: none;
 }
+
+.nav-item button {
+    color: black !important;
+}
