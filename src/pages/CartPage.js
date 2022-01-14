@@ -132,4 +132,3 @@ function CartPage() {
 }
 
 export default CartPage;
-// 11.00

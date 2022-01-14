@@ -12,6 +12,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import OrdersPage from './pages/OrdersPage';
 import AdminPage from './pages/AdminPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path='/register' exact element={<RegisterPage />} />
         </Routes>
       </BrowserRouter>
+      <div><Footer /></div>
     </div>
   );
 }
@@ -42,4 +44,3 @@ export const ProtectedRoutes = ({ children }) => {
     return <Navigate to='/login' />
   }
 }
-//1.33.21

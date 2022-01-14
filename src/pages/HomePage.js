@@ -25,7 +25,6 @@ function HomePage() {
             const users = await getDocs(collection(fireDB, "products"))
             const productsArray = [];
             users.forEach((doc) => {
-                // doc.data() is never undefined for query doc snapshots
                 const obj = {
                     id: doc.id,
                     ...doc.data()

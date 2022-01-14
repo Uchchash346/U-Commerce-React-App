@@ -6,16 +6,16 @@
     z-index: 2;
 }
 .navbar{
-    background-color: #003F5C !important;
+    background-color: #04D95F !important;
 }
-/* 1DDA59 */
+
 .nav-link {
     color: white !important;
-    font-weight: bold !important;
 }
 
 .navbar-brand {
     color: white !important;
+    font-weight: bold !important;
 }
 
 .content{
@@ -23,18 +23,15 @@
 }
 
 .footer {
+    margin-top: 20px;
     padding:10px;
     text-align: center;
-    background-color: #003F5C;
+    background-color: #04D95F;
     color: white;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 button{
-    background-color: #003F5C;
+    background-color: #04D95F;
     box-shadow: none;
     border: 1px solid rgba(255,255,255,0.692);
     color: white;
